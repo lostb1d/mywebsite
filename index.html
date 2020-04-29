@@ -1,0 +1,487 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinesh Bishwakarma | Geomatics Engineer</title>
+    
+    <!-- Bootstrap Css file -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- font awesome file  -->
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <!-- custom css  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- font awesome  -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+
+
+    <!-- ajaxa here for form submission -->
+    <script>
+      document.getElementById('status').innerHTML = "Sending...";
+      formData = {
+      'name'     : $('input[name=name]').val(),
+      'email'    : $('input[name=email]').val(),
+      'subject'  : $('input[name=subject]').val(),
+      'message'  : $('textarea[name=message]').val()
+      };
+
+
+      $.ajax({
+      url : "mail.php",
+      type: "POST",
+      data : formData,
+      success: function(data, textStatus, jqXHR)
+      {
+
+      $('#status').text(data.message);
+      if (data.code) //If mail was sent successfully, reset the form.
+      $('#contact-form').closest('form').find("input[type=text], textarea").val("");
+      },
+      error: function (jqXHR, textStatus, errorThrown)
+      {
+      $('#status').text(jqXHR);
+      }
+      });
+    </script>
+  </head>
+<body>
+  <a name="home"></a>
+    <!-- jquery file -->
+    <script src="js/jquery.3.4.1.js"></script>
+    <!-- Bootstrap js file -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+            $.ajax({
+              url : "https://nepalcorona.info/api/v1/data/nepal",
+              method: "GET",
+              success : function(data){
+                $('#total_tested_result').html(data.tested_total);
+                $('#tested_positive_result').html(data.tested_positive);
+                $('#tested_negative_result').html(data.tested_negative);
+                $('#no_of_death_result').html(data.deaths);
+                $('#no_of_recovered').html(data.recovered);
+                $('#no_of_isolation').html(data.in_isolation);
+              },
+              error : function(err){
+                console.log(err);
+              }
+            })
+    </script>
+    <div class="container-fluid corona text-white">
+      <marquee>
+        <p><strong>
+          <b class="corona-header">Corona Update :: </b>
+          <b>Total Tested : </b><span class="corona-result" id="total_tested_result"></span>
+          <b> | Tested Positive : </b><span class="corona-result"  id="tested_positive_result"></span>
+          <b> | Tested Negative : </b><span  class="corona-result" id="tested_negative_result"></span>
+          <b> | Death(s) : </b><span  class="corona-result"  id="no_of_death_result"></span>
+          <b> | Recovered : </b><span class="corona-result"  id="no_of_recovered"></span>
+          <b> | In Isolation : </b><span  class="corona-result"  id="no_of_isolation"></span></strong>
+        </p>
+      </marquee>
+    </div>
+   <!-- <h4>This is where the data will be shown....</h4> -->
+    <!-- ===========================start header area ============================ -->
+    <div class="header_area">
+      <div class="main-menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="#"><img src="img/logo.png"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="mr-auto"></div>
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#home">Home </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#skill">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#involvement">Involvements</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#project">Projects</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- ===========================end header area ============================ -->
+    
+     
+    
+
+
+    <!-- =========================start main area ============================== -->
+<main class="site-main">
+  <!-- ==================start banner area================ -->
+  <section class="site-banner-1">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12 site-title">
+          <h3 class="title-text">Hey ... </h3>
+          <h1 class="title-text-uppercase">I am Dinesh</h1>
+          <h4 class="title-text text-uppercase">Geomatics Engineer</h4>
+          <div class="site-buttons">
+            <div class="d-flex flex-row flex-wrap">
+              <button type="button" class="btn btn-primary mr-4 text-uppercase">hire me!</button>
+              <button type="button" class="btn btn-success text-uppercase">Get Cv</button>
+             </div>
+          </div>
+        </div>
+        <div class="col-lg col-md-12 col-sm-12 banner-img">
+          <img src="img/dinesh.png" alt="man-working-on-laptop" class="img-fluid">
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <a name="about"></a>
+<section class="about">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6 col-md-12 col-sm-12 site-title">
+        <h3 class="title-text">About Me ... </h3>
+        <!-- <h1 class="title-text-uppercase">I am Dinesh</h1> -->
+        <p class="text-paragraph">Hi, I am Dinesh Bishwakarma. I am currently doing Bachelor in Geomatics Engineering in I.O.E Pashchimanchal Campus, Lamachour Pokhara. </p>
+        <p class="text-paragraph">Being a Geomatics Engineering Student, I've keen interest on Remote Sensing , Geographical Information System (GIS), Cartography , Surveying , Global Positioning System (GPS) and Geodesy . I love coding , so I prefer being a GIS Developer.  </p>
+      </div>
+      <div class="col-lg-6 col-md-12 col-sm-12 site-banner-2">
+      </div>        
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ========================= SKILLS =============================== -->
+<a name="skill"></a>
+<section class="skills">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6 col-md-12 col-sm-12 site-banner-3">
+        <div class="row text-skills">
+        <div class="col-lg-4"><strong>Surveyor</strong>
+        <ul class="list-unstyled">
+          <li>Level</li>
+          <li>Theodolite</li>
+          <li>Total Station</li>
+          <li>GNSS Survey</li>
+          <li>Aerial Survey</li>
+        </ul>
+        
+        </div>
+        <div class="col-lg-4"><strong>Analyst</strong>
+          <ul class="list-unstyled">
+            <li>Arc GIS</li>
+            <li>Q-GIS</li>
+            <li>ERDAS Imagine</li>
+            <li>Auto Cad</li>
+            <li>Agisoft Photoscan</li>
+          </ul>
+        </div>
+        <div class="col-lg-4"><strong>Developer</strong>
+          <ul class="list-unstyled">
+            <li>C</li>
+            <li>C++</li>
+            <li>Python</li>
+            <li>Php</li>
+            <li>MySql</li>
+            <li>Google Earth Engine</li>
+          </ul></div>
+      </div>
+
+      </div>
+      <div class="col-lg-6 col-md-12 col-sm-12 site-title">
+        <h3 class="title-text">Skills </h3>
+       <p class="text-paragraph">Always remember me for Surveying , Geospatial Analysis and Planning , Geospatial Information System Development.</p>
+      </div> 
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ================ end of skills area ======================== -->
+
+<!-- =================== start of clubs area ======================== -->
+<a name="involvement"></a>
+<section class="clubs">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-9 col-md-12 col-sm-12 site-title">
+        <h3 class="title-text">Involvements</h3>
+        <!-- <h1 class="title-text-uppercase">I am Dinesh</h1> -->
+        <p class="text-paragraph">Student at I.O.E Pashchimanchal Campus, Lamachour Pokhara</p>
+        <p class="text-paragraph">Former <strong>GIS Developer</strong> at Center for Space Science and Geomatics Studies, Pokhara</p>
+        <p class="text-paragraph">Former <strong>Vice-President</strong> at Geomatics Engineering Students' Association of Nepal (GESAN)</p>
+        
+      </div>
+      <div class="col-lg-3 col-md-12 col-sm-12 site-banner-4">
+      </div>        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========================== end of club area =========================== -->
+<!-- =====================start of project  area =================== -->
+<a name="project"></a>
+<section class="projects">
+  <div class="container-fluid site-banner-5">
+    <div class="row">
+      
+      <div class="col-lg-12 col-md-12 col-sm-12 site-title">
+        <h3 class="title-text">Projects </h3>
+        <div class="row">
+          <div class="col-lg-3 col-md-4 col-sm-12 t">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="img/projects/pms.jpg" alt="Paragliding Monitoring System">
+              <div class="card-body">
+                <h5 class="card-title">Paragliding Monitoring System</h5>
+                <p class="card-text">Paragliding Monitoring System is designed to track the live location of Paraglider on the sky in 3D environment.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-3 col-md-4 col-sm-12 ">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="img/projects/gee-web-app.png" alt="Web App to Perform GEE operations">
+              <div class="card-body">
+                <h5 class="card-title">Web App to Perform GEE Operations</h5>
+                <p class="card-text">Using Google Earth Engine as backend in Python Programming, app is developed to perform general Earth Engine operations on Landsat 8, Sentinel 2A and SRTM 30m DEM imageries</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="col-lg-3 col-md-4 col-sm-12 ">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="img/projects/vehicle-rental.png" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Classified Vehicle Rental Advertisor</h5>
+                <p class="card-text">It is a website where we can advertise our vehicle for rental purpose. The site will show the vehicle along with their location in map. </p>
+                <a href="http://www.dineshbishwakarma.com.np/vehicle_rental/index.php" target="new" class="btn btn-primary">Visit</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-sm-12 bg-light">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="img/projects/jaljala-your-travel-advisor.png" alt="Jaljala, Your Travel Advisor">
+              <div class="card-body">
+                <h5 class="card-title">Jaljala, Your Travel Advisor</h5>
+                <p class="card-text">Jaljala is the tourism based website particularly developed for the Mid Western and Far Western Part of Nepal. If any one who is interested to handle this blog can contact me.</p>
+                <a href="http://www.jaljala.com.np" class="btn btn-primary">Visit</a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+          
+      </div>
+    </div>
+  </div>
+</section>
+
+ <!-- ============================start of contact area ======================== -->
+<a name="contact"></a>
+ <section class="contact">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-8 col-md-12 col-sm-12 site-title">
+        <div class="col-lg-12 col-md-6 col-sm-12">
+    
+          
+         <!--Section: Contact v.2-->
+<section class="mb-4">
+
+  <!--Section heading-->
+  <h2 class="h1-responsive font-weight-bold text-center my-4">Contact</h2>
+  <!--Section description-->
+  <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact me directly. I will come back to you within
+      a matter of hours to help you.</p>
+
+  <div class="row">
+
+      <!--Grid column-->
+      <div class="col-md-9 mb-md-0 mb-5">
+          <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+
+              <!--Grid row-->
+              <div class="row">
+
+                  <!--Grid column-->
+                  <div class="col-md-6">
+                      <div class="md-form mb-0">
+                          <input type="text" id="name" name="name" class="form-control">
+                          <label for="name" class="">Your name</label>
+                      </div>
+                  </div>
+                  <!--Grid column-->
+
+                  <!--Grid column-->
+                  <div class="col-md-6">
+                      <div class="md-form mb-0">
+                          <input type="text" id="email" name="email" class="form-control">
+                          <label for="email" class="">Your email</label>
+                      </div>
+                  </div>
+                  <!--Grid column-->
+
+              </div>
+              <!--Grid row-->
+
+              <!--Grid row-->
+              <div class="row">
+                  <div class="col-md-12">
+                      <div class="md-form mb-0">
+                          <input type="text" id="subject" name="subject" class="form-control">
+                          <label for="subject" class="">Subject</label>
+                      </div>
+                  </div>
+              </div>
+              <!--Grid row-->
+
+              <!--Grid row-->
+              <div class="row">
+
+                  <!--Grid column-->
+                  <div class="col-md-12">
+
+                      <div class="md-form">
+                          <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                          <label for="message">Your message</label>
+                      </div>
+
+                  </div>
+              </div>
+              <!--Grid row-->
+
+          </form>
+
+          <div class="text-center text-md-left">
+              <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+          </div>
+          <div class="status"></div>
+      </div>
+      <!--Grid column-->
+
+  </div>
+
+</section>
+<!--Section: Contact v.2-->
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12 site-banner-6">
+
+      </div>
+      </div>
+    </div>
+</section>
+  <!-- ========================== end  of contact area ========================= -->
+
+
+  <!-- =========================end banner area====================== -->
+</main>
+
+
+    <!-- =========================end main area ============================== -->
+    
+
+
+    <!-- ========================== footer area ============================= -->
+
+    <footer class="mainfooter" role="contentinfo">
+      <div class="footer-middle">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+            <!--Column1-->
+            <div class="footer-pad">
+              <h4>My Projects</h4>
+              <ul class="list-unstyled">
+                <li><a href="http://www.dineshbishwakarma.com.np/vehicle_rental/">Vehicle Rental Service</a></li>
+                <li><a href="http://www.jaljala.com.np">Jaljala, Your Travel Advisor</a></li>
+                <li><a href="http://www.dineshbishwakarma.com.np/jaggadalal">Jagga Dalal</a></li>
+
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <!--Column1-->
+            <div class="footer-pad">
+              <h4>Friends</h4>
+              <ul class="list-unstyled">
+                <li><a href="https://kaditya97.com.np/">Aditya Kushwaha</a></li>
+                <li><a href="http://sunnylabh.com.np/">Sunny Kumar Labh</a></li>
+                <li><a href="http://shilpabhandari.com.np/">Shilpa Bhandari</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <!--Column1-->
+            <div class="footer-pad">
+              <h4>Important Links</h4>
+              <ul class="list-unstyled">
+                <li><a href="http://www.ioe.edu.np">Institute of Engineering(I.O.E)</a></li>
+                <li><a href="http://www.ioepas.edu.np">I.O.E Pashchimanchal Campus</a></li>
+                <li><a href="http://www.ioepas.edu.np/cssgs">CSSGS</a></li>
+                <li><a href="https://www.ait.ac.th/">Asian Institute of Technology</a></li>
+                <li><a href="http://www.ioegesan.org">Geomatics Engineering Students Association of Nepal</a></li>
+                <li><a href="http://www.gisjobs.com">GIS Jobs</a></li>
+                <li>
+                  <a href="#"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h4>Follow Me</h4>
+                <ul class="social-network social-circle">
+                 <li><a href="https://wwww.facebook.com/lostb1" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                 <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                 <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-twitter"></i></a></li>
+                 <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-instagram"></i></a></li>
+                </ul>				
+        </div>
+        </div>
+      <div class="row">
+        <div class="col-md-12 copy">
+          <p class="text-center">&copy; Copyright 2020 - Dinesh Bishwakarma.  All rights reserved.</p>
+        </div>
+      </div>
+    
+    
+      </div>
+      </div>
+    </footer>
+      
+      
+
+
+
+    <!-- ======================== footer area ends ============================ -->
+</body>
+</html>
