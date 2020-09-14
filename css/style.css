@@ -30,12 +30,12 @@ body{
     -webkit-text-fill-color: transparent;
     background-clip:text;
 }
-a:hover{
+/* a:hover{
     background: var(--gradient-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color:transparent;
     background-clip:text;
-}
+} */
 
 /* ends navigation */
 
@@ -261,4 +261,22 @@ footer {
   .corona-result{
     color: #16222A;
     
+  }
+
+  .lives-matter{
+    background-color: black;
+    height:95vh;
+    width: 100hh;
+  }
+
+  .lives-title{
+    color: white;
+    padding-top: 30vh;
+    font-size: 20vh;
+  }
+
+  .lives-desc{
+    color: white;
+    padding-top: 5vh;
+    font-size: 5vh;
   }
