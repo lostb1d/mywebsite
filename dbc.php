@@ -1,4 +1,4 @@
 <?php
-    $conn = mysqli_connect("localhost","root","");
-    mysqli_select_db($conn, 'test');
+    $conn = mysqli_connect("sql204.epizy.com","epiz_25279838","dFfrJvURAbgM","epiz_25279838_w395");
+    mysqli_select_db($conn, 'quiz');
 ?>

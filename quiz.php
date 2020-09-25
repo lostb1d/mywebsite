@@ -6,9 +6,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>PSC Quiz fo Geomatics Engineer</title>
 
     <link rel="image_src" href="img/quiz.jpg">
+=======
+    <title>Dinesh Bishwakarma | Geomatics Engineer</title>
+>>>>>>> 2b614755d4a30bf67057166bee552ae5757265f9
     
     <!-- Bootstrap Css file -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
