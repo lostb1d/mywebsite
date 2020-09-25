@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap Css file -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    
+    <!-- <link rel="stylesheet" href="css/all.min.css"> -->
+
+    <!-- custom css  -->
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!-- ---- font awesome ----  -->
+    <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.min.css">
+    
+
+    <!-- fab css  -->
+    <link rel="stylesheet" href="css/fab.css">
+
+
+    <!-- -------- quiz css -------------  -->
+    <link rel="stylesheet" href="css/quiz.css">
+
+    <!-- ajaxa here for form submission -->
+</head>
+<body>
+    <form action="quiz_form.php" method="POST">
+        <div class="form-group">
+            <label for="date">Enter Date</label>
+            <input type="date" class="form-control" id="date" name="date">            
+        </div>
+        <div class="form-group">
+            <label for="title">Enter Title</label>
+            <input type="text" class="form-control" id="title" name="title">            
+        </div>
+        <div class="form-group">
+            <label for="quiz_class">Enter Class</label>
+            <input type="text" class="form-control" id="quiz_class" name="quiz_class">            
+        </div>
+        <div class="form-group">
+            <label for="link">Enter Quiz Link</label>
+            <input type="text" class="form-control" id="quiz_link" name="quiz_link">            
+        </div>
+        <div class="form-group">
+            <label for="link">Authentication Key</label>
+            <input type="text" class="form-control" id="authentication_key" name="authentication_key">            
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</body>
+</html>

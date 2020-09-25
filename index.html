@@ -56,38 +56,7 @@
     <script src="js/jquery.3.4.1.js"></script>
     <!-- Bootstrap js file -->
     <script src="js/bootstrap.min.js"></script>
-    <script>
-            $.ajax({
-              url : "https://nepalcorona.info/api/v1/data/nepal",
-              method: "GET",
-              success : function(data){
-                $('#total_tested_result').html(data.tested_total);
-                $('#tested_positive_result').html(data.tested_positive);
-                $('#tested_negative_result').html(data.tested_negative);
-                $('#no_of_death_result').html(data.deaths);
-                $('#no_of_recovered').html(data.recovered);
-                $('#no_of_isolation').html(data.in_isolation);
-              },
-              error : function(err){
-                console.log(err);
-              }
-            })
-    </script>
     
-    <div class="container-fluid corona text-white">
-      <marquee>
-        <p><strong>
-          <b class="corona-header">Corona Update :: </b>
-          <b>Total Tested : </b><span class="corona-result" id="total_tested_result"></span>
-          <b> | Tested Positive : </b><span class="corona-result"  id="tested_positive_result"></span>
-          <b> | Tested Negative : </b><span  class="corona-result" id="tested_negative_result"></span>
-          <b> | Death(s) : </b><span  class="corona-result"  id="no_of_death_result"></span>
-          <b> | Recovered : </b><span class="corona-result"  id="no_of_recovered"></span>
-          <b> | In Isolation : </b><span  class="corona-result"  id="no_of_isolation"></span></strong>
-        </p>
-      </marquee>
-    </div>
-
     <!-- <div class="container-fluid lives-matter text-white">
         <center><h1 class="lives-title">Dalit Lives Matter</h1>
                 <h4 class="lives-desc">Stop all sorts of discrimination.</h4>
@@ -95,6 +64,7 @@
     </div> -->
    <!-- <h4>This is where the data will be shown....</h4> -->
     <!-- ===========================start header area ============================ -->
+    
     <div class="header_area">
       <div class="main-menu">
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -124,6 +94,10 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">Blog</a>
               </li>
+
+              <li class="nav-item blink_me">
+                <a class="nav-link" href="quiz.php">Quiz</a>
+              </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Contact</a>
               </li>
@@ -136,7 +110,7 @@
 
     <!-- ===========================end header area ============================ -->
     
-     
+    <br><br>
     
 <!-- ------------ floating action button ----------------- -->
 
@@ -212,8 +186,8 @@
       <div class="col-lg-6 col-md-12 col-sm-12 site-title">
         <h3 class="title-text">About Me ... </h3>
         <!-- <h1 class="title-text-uppercase">I am Dinesh</h1> -->
-        <p class="text-paragraph">Hi, I am Dinesh Bishwakarma. I am currently doing Bachelor in Geomatics Engineering in I.O.E Pashchimanchal Campus, Lamachour Pokhara. </p>
-        <p class="text-paragraph">Being a Geomatics Engineering Student, I've keen interest on Remote Sensing , Geographical Information System (GIS), Cartography , Surveying , Global Positioning System (GPS) and Geodesy . I love coding , so I prefer being a GIS Developer.  </p>
+        <p class="text-paragraph">I am a young, energetic and enthusiastic Geomatics Engineering student studying at Tribhuvan University, Institute of Engineering (I.O.E), Pashchimanchal Campus, who will be committed to any task assigned. I have gained work experience working as Geographic Information System (GIS) Developer at Center for Space Science and Geomatics Studies (CSSGS). I aspire my future line of work to be in the sector of GIS and Remote Sensing which are both career paths that are appealing to me. I have good time keeping skills, I am a quick thinker and am both analytical and resourceful. I can adapt to new situations and confidence come naturally to me. I am also oriented to team work. </p>
+        
       </div>
       <div class="col-lg-6 col-md-12 col-sm-12 site-banner-2">
       </div>        
@@ -490,6 +464,8 @@
                 <li><a href="https://kaditya97.com.np/">Aditya Kushwaha</a></li>
                 <li><a href="http://sunnylabh.com.np/">Sunny Kumar Labh</a></li>
                 <li><a href="http://shilpabhandari.com.np/">Shilpa Bhandari</a></li>
+                <li><a href="http://sameep.com.np/">Sameep Yogi</a></li>
+                <li><a href="http://biratlamichhane.com.np/">Birat Lamichhane</a></li>
               </ul>
             </div>
           </div>
